@@ -8,27 +8,29 @@ def plot_people_count(dataframe: pd.DataFrame, filename: str) -> None:
     """
     Строит график количества людей на основе данных из DataFrame.
 
-    Эта функция принимает DataFrame, содержащий количество людей на каждом
-    кадре, и строит график, отображающий изменения количества людей во
-    времени. График сохраняется в виде PNG-файла.
-
     Параметры:
-        dataframe (pd.DataFrame): DataFrame, содержащий столбец 'people_count'
-                                   с количеством людей.
+        dataframe (pd.DataFrame): DataFrame с данными.
+        filename (str): Имя файла для сохранения графика.
 
     Возвращает:
         None
     """
-    plt.figure(figsize=(10, 5))
+    plt.style.use('ggplot')
 
-    plt.plot(dataframe.index, dataframe['people_count'], marker='o', linestyle='-')
+    plt.figure(figsize=(12, 6))
 
-    plt.title('People Count')
-    plt.xlabel('Frame')
-    plt.ylabel('Number of People')
+    plt.plot(dataframe.index, dataframe['people_count'], marker='o', linestyle='-', color='royalblue',
+             linewidth=2, markersize=6, markerfacecolor='orange', markeredgewidth=2)
 
-    plt.xticks(rotation=45)
-    plt.grid()
+    plt.title('People Count Over Time', fontsize=18, fontweight='bold')
+    plt.xlabel('Frame', fontsize=14, fontweight='bold')
+    plt.ylabel('Number of People', fontsize=14, fontweight='bold')
+
+    plt.xticks(rotation=45, fontsize=12)
+    plt.yticks(fontsize=12)
+
+    plt.grid(True, linestyle='--', alpha=0.6)
     plt.tight_layout()
 
-    plt.savefig(path_to_graph(filename))
+    plt.savefig(path_to_graph(filename), dpi=300)
+    # plt.show()
