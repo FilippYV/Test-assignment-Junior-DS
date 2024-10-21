@@ -12,8 +12,8 @@
 Сначала клонируйте этот репозиторий на свой компьютер:
 
 ```bash
-git clone https://github.com/FilippYV/yourproject.git
-cd yourproject
+git clone https://github.com/FilippYV/Test-assignment-Junior-DS/tree/master
+cd Test-assignment-Junior-DS
 ```
 
 ### 2. Создайте и активируйте виртуальное
