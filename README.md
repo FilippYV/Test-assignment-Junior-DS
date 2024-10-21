@@ -9,7 +9,7 @@
 
 ![Пример работы программы](https://github.com/user-attachments/assets/6e46442a-7eda-422b-b696-2722bf86501c)
 На кадре из видео как программа выполнять детекцию людей и их отрисовку.
-[Полнове видео[(https://disk.yandex.ru/i/Dpyoxp-vOJwRQA) можно скачать на яндекс диске.
+![Полнове видео](https://disk.yandex.ru/i/Dpyoxp-vOJwRQA) можно скачать на яндекс диске.
 
 ## Установка
 
@@ -22,7 +22,7 @@ git clone https://github.com/FilippYV/Test-assignment-Junior-DS/tree/master
 cd Test-assignment-Junior-DS
 ```
 
-### 2. Создайте и активируйте виртуальное
+### 2. Создайте и активируйте виртуальное окружение
 
 #### Для Windows
 
@@ -45,6 +45,8 @@ source venv/bin/activate
 ```
 pip install -r requirements.txt
 ```
+
+#### 3.1 Учтите что, для вычисления на графическом процессоре, вам необходимо скачать, версию pytorch, которая поддерживает ваше устройстве. Скачать pytorch с поддержкой вашего gpu можно ![тут](https://pytorch.org/get-started/locally/).
 
 ### 4. Скачайте веса нейросети
 
